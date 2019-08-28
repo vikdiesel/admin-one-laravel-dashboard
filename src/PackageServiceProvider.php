@@ -42,7 +42,7 @@ class PackageServiceProvider extends ServiceProvider{
 			$this->copyFile($command, '.editorconfig');
 			$this->copyFile($command, 'webpack.mix.js');
 
-			$command->info('Bulma scaffolding installed successfully.');
+			$command->info('Admin One installed successfully.');
 			$command->comment('Please run "npm install && npm run dev" to compile your fresh scaffolding.');
 		});
 	}
