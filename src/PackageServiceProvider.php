@@ -33,6 +33,7 @@ class PackageServiceProvider extends ServiceProvider{
 			$this->copyFiles($command, 'resources/js/views/Clients');
 			$this->copyFiles($command, 'resources/sass');
 			$this->copyFiles($command, 'resources/sass/libs');
+			$this->copyFiles($command, 'resources/views');
 			$this->copyFiles($command, 'resources/views/auth');
 			$this->copyFiles($command, 'resources/views/auth/passwords');
 			$this->copyFiles($command, 'resources/views/components');
