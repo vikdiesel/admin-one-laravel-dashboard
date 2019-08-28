@@ -1,7 +1,7 @@
 <?php
 
 
-namespace LaravelBulmaAuthPreset\Package;
+namespace AdminOneLaravelDashboard\Package;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
