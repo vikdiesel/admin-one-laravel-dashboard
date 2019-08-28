@@ -38,7 +38,7 @@ More info on free & premium versions of Admin One Dashboard: https://justboil.me
 ## Description & Demo
 
 * Description: https://justboil.me/bulma-admin-template/one
-* **Free Dashboard** Demo: https://admin-one-laravel-free.justboil.me
+* **Free Larvael Dashboard** Demo: https://admin-one-laravel-free.justboil.me
 * **Premium Dashboard** Demo: https://admin-one-vue-cli.justboil.me (Premium Laravel Demo is coming soon)
 
 ## Quick Start
