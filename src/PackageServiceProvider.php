@@ -59,10 +59,16 @@ class PackageServiceProvider extends ServiceProvider{
 					continue;
 				}
 			}
+			$targetFilename = $res_file->getFilename();
+			$stubExtPos = strrpos($targetFilename, '.stub');
 
-			$filename = $subDirectory . '/' . $res_file->getFilename();
+			if ($stubExtPos !== false) {
+				$targetFilename = substr($targetFilename, 0, $stubExtPos) . '.php';
+			}
 
-			$filesystem->copy($res_file->getRealPath(), base_path($filename));
+			$targetFilename = $subDirectory . '/' . $targetFilename;
+
+			$filesystem->copy($res_file->getRealPath(), base_path($targetFilename));
 		}
 	}
 
