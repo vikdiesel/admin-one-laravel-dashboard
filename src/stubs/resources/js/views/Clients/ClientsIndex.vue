@@ -88,11 +88,11 @@
 <script>
 import map from 'lodash/map'
 import CardComponent from '@/components/CardComponent'
-import ModalBox from "@/components/ModalBox";
-import TitleBar from "@/components/TitleBar";
-import HeroBar from "@/components/HeroBar";
-import CardToolbar from "../../components/CardToolbar";
-import ModalTrashBox from "../../components/ModalTrashBox";
+import ModalBox from '@/components/ModalBox'
+import TitleBar from '@/components/TitleBar'
+import HeroBar from '@/components/HeroBar'
+import CardToolbar from '@/components/CardToolbar'
+import ModalTrashBox from '@/components/ModalTrashBox'
 export default {
   name: "ClientIndex",
   components: {ModalTrashBox, CardToolbar, HeroBar, TitleBar, ModalBox, CardComponent},
