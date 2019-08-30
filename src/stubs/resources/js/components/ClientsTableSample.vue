@@ -1,7 +1,6 @@
 <template>
   <div>
-    <modal-box :is-active="isModalActive" :trash-subject="trashObjectName" @confirm="trashConfirm"
-               @cancel="trashCancel"/>
+    <modal-trash-box :is-active="isModalActive" :trash-subject="trashObjectName" @confirm="trashConfirm" @cancel="trashCancel"/>
     <b-table
       :checked-rows.sync="checkedRows"
       :checkable="checkable"
@@ -67,12 +66,11 @@
 </template>
 
 <script>
-import axios from 'axios'
-import ModalBox from '@/components/ModalBox'
+import ModalTrashBox from '@/components/ModalTrashBox'
 
 export default {
   name: 'ClientsTableSample',
-  components: { ModalBox },
+  components: { ModalTrashBox },
   props: {
     dataUrl: {
       type: String,
