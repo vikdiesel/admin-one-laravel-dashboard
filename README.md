@@ -47,7 +47,7 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 
 - `cd` to project directory
 - `composer require vikdiesel/admin-one-laravel-dashboard --dev`
-- `php artisan make:auth`
+- `php artisan make:auth` (skip this step on Laravel 6.x)
 - `php artisan preset admin-one`
 - `php artisan migrate`
 - `php artisan db:seed`
