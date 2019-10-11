@@ -34,7 +34,8 @@ class AdminOnePreset extends Preset
 			'numeral' => '^2.0.6',
 			'vue-chartjs' => '^3.4.2',
 			'vue-router' => '3.1.3',
-			'vuex' => '^3.0.1'
+			'vuex' => '^3.0.1',
+			'vue' => '^2.6.10'
        ] + Arr::except($packages, ['bootstrap','jquery','popper.js']);
 	}
 }
