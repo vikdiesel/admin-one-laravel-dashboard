@@ -50,6 +50,7 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 - `php artisan make:auth` (skip this step on Laravel 6.x)
 - `php artisan preset admin-one`
 - `php artisan migrate`
+- `composer dump-autoload` # otherwise seed doesn't work
 - `php artisan db:seed`
 - `npm install`
 - `npm run dev` or `npm run prod`
