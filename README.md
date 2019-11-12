@@ -1,12 +1,12 @@
 # [Admin One Laravel Dashboard (SPA)](https://justboil.me/bulma-admin-template/one)
 
-![version](https://img.shields.io/badge/version-1.3.2-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg)
+![version](https://img.shields.io/badge/version-1.3.4-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ![Vue Bulma Admin Dashboard](https://justboil.me/images/one/preview-free.jpg?v=1.2.0)
 
 **Admin One Laravel Dashboard (SPA)** is simple yet beautiful Laravel Admin Dashboard.
 
-* Built for Laravel 5.8+ and 6.0+
+* Built for Laravel 5.8 and 6.x
 * Fully-styled auth scaffolding
 * Profile & avatar management with back-end
 * Full Resource CRUD Sample (with front-end & back-end)
@@ -50,7 +50,7 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 - `php artisan make:auth` (skip this step on Laravel 6.x)
 - `php artisan preset admin-one`
 - `php artisan migrate`
-- `php artisan db:seed`
+- `php artisan db:seed` (if you get an error, run `php artisan make:seed DummySeeder`)
 - `npm install`
 - `npm run dev` or `npm run prod`
 
@@ -79,7 +79,7 @@ The issue list is reserved exclusively for bug reports and feature requests. Tha
 
 ## Package info
 
-Tested with Laravel 5.8+ and 6.0+ (but should work well with everything above 5.5). 
+Tested with Laravel 5.8+ and 6.x (but should work well with everything above 5.5). 
 
 In case of errors, just manually merge package's `src/stubs` directory into your app's base directory and install npm dependencies listed in `src/AdminOnePreset.php`
 
