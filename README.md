@@ -61,7 +61,8 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 - `php artisan ui:controllers`
 - `php artisan jb:admin-one-preset`
 - `php artisan migrate`
-- `php artisan db:seed` (if you get an error, run `php artisan make:seed DummySeeder` &mdash; this does unknown magic, you may delete DummySeeder class after creation)
+- `composer dump-autoload` (otherwise seed doesn't work)
+- `php artisan db:seed`
 - `npm install`
 - `npm run dev` or `npm run prod`
 
