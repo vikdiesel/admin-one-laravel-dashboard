@@ -1,12 +1,12 @@
-# [Admin One Laravel Dashboard (SPA)](https://justboil.me/bulma-admin-template/one)
+# [Admin One — Free Laravel Dashboard (SPA)](https://justboil.me/bulma-admin-template/one)
 
-![version](https://img.shields.io/badge/version-1.3.2-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Latest Stable Version](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/version?v=1.3.7)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![Total Downloads](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/downloads)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![License](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/license)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard)
 
-![Vue Bulma Admin Dashboard](https://justboil.me/images/one/preview-free.jpg?v=1.2.0)
+![Free Laravel Admin Dashboard](https://justboil.me/images/one/preview-free.jpg?v=1.2.0)
 
-**Admin One Laravel Dashboard (SPA)** is simple yet beautiful Laravel Admin Dashboard.
+**Admin One** is simple, beautiful and free Laravel admin dashboard (built with Vue.js, Bulma & Buefy).
 
-* Built for Laravel 5.8+ and 6.0+
+* Built for Laravel 7.x
 * Fully-styled auth scaffolding
 * Profile & avatar management with back-end
 * Full Resource CRUD Sample (with front-end & back-end)
@@ -17,11 +17,11 @@
 * More than 17 custom components
 * [Premium version](https://justboil.me/bulma-admin-template/one) available
 
-JustBoil.me is happy to share this dashboard with you. Feel free to give your feedback
+[JustBoil.me](https://justboil.me) is excited to share this dashboard with community.
 
 ## Table of Contents
 
-* [VueCLI Version](#vuecli-version)
+* [Other versions](#other-versions)
 * [Description & Demo](#description--demo)
 * [Quick Start](#quick-start)
 * [Browser Support](#browser-support)
@@ -29,11 +29,21 @@ JustBoil.me is happy to share this dashboard with you. Feel free to give your fe
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
 
-## VueCLI version
+## Other versions
 
-VueCLI 3.6 version available at https://github.com/vikdiesel/admin-one-vue-bulma-dashboard
+More info on free & premium versions of Admin One Dashboard: https://justboil.me/bulma-admin-template/one
 
-More info on free & premium versions of Admin One Dashboard: https://justboil.me/bulma-admin-template/one 
+### Vue.js Bulma Admin Dashboard (SPA)
+
+**Free & premium.** Vue.js 2.6 + Vue CLI 3.6 SPA Dashboard
+
+https://github.com/vikdiesel/admin-one-vue-bulma-dashboard
+
+### Bulma Admin Dashboard (HTML)
+
+**Free & premium.** HTML + CSS/SCSS Bulma admin dashboard 
+
+https://github.com/vikdiesel/admin-one-bulma-dashboard
 
 ## Description & Demo
 
@@ -47,10 +57,11 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 
 - `cd` to project directory
 - `composer require vikdiesel/admin-one-laravel-dashboard --dev`
-- `php artisan make:auth` (skip this step on Laravel 6.x)
-- `php artisan preset admin-one`
+- `composer require laravel/ui --dev`
+- `php artisan ui:controllers`
+- `php artisan jb:admin-one-preset`
 - `php artisan migrate`
-- `composer dump-autoload` # otherwise seed doesn't work
+- `composer dump-autoload` (otherwise seed doesn't work)
 - `php artisan db:seed`
 - `npm install`
 - `npm run dev` or `npm run prod`
@@ -75,12 +86,12 @@ The issue list is reserved exclusively for bug reports and feature requests. Tha
 
 ## Licensing
 
-- Copyright &copy; 2019 Viktor Kuzhelnyi (https://justboil.me)
+- Copyright &copy; 2019-2020 JustBoil.me (https://justboil.me)
 - Licensed under MIT
 
 ## Package info
 
-Tested with Laravel 5.8+ and 6.0+ (but should work well with everything above 5.5). 
+Built for Laravel 7.x (can be used with Laravel 6.x).
 
 In case of errors, just manually merge package's `src/stubs` directory into your app's base directory and install npm dependencies listed in `src/AdminOnePreset.php`
 
