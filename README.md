@@ -1,6 +1,6 @@
 # [Admin One — Free Laravel Dashboard (SPA)](https://justboil.me/bulma-admin-template/one)
 
-![version](https://img.shields.io/badge/version-1.3.7-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Latest Stable Version](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/version)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![Total Downloads](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/downloads)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![License](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/license)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard)
 
 ![Free Laravel Admin Dashboard](https://justboil.me/images/one/preview-free.jpg?v=1.2.0)
 
