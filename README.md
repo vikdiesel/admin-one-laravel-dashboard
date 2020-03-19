@@ -1,8 +1,8 @@
-# [Admin One — Laravel Dashboard (SPA)](https://justboil.me/bulma-admin-template/one)
+# [Admin One — Free Laravel Dashboard (SPA)](https://justboil.me/bulma-admin-template/one)
 
 ![version](https://img.shields.io/badge/version-1.3.6-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Vue Bulma Admin Dashboard](https://justboil.me/images/one/preview-free.jpg?v=1.2.0)
+![Free Laravel Admin Dashboard](https://justboil.me/images/one/preview-free.jpg?v=1.2.0)
 
 **Admin One** is simple, beautiful and free Laravel admin dashboard (built with Vue.js, Bulma & Buefy).
 
