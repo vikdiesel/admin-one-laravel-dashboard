@@ -25,17 +25,17 @@ class AdminOnePreset extends Preset
 	protected static function updatePackageArray(array $packages)
 	{
 		return [
-			'@mdi/font' => '^4.5.95',
-			'buefy' => '^0.8.6',
+			'@mdi/font' => '^4.9.95',
+			'buefy' => '^0.8.13',
 			'bulma' => '^0.7.5',
-			'chart.js' => '^2.9.2',
+			'chart.js' => '^2.9.3',
 			'laravel-mix-alias' => '^1.0.2',
 			'moment' => '^2.24.0',
 			'numeral' => '^2.0.6',
 			'vue-chartjs' => '^3.5.0',
-			'vue-router' => '3.1.3',
-			'vuex' => '^3.1.2',
-			'vue' => '^2.6.10'
+			'vue-router' => '^3.1.6',
+			'vuex' => '^3.1.3',
+			'vue' => '^2.6.11'
        ] + Arr::except($packages, ['bootstrap','jquery','popper.js']);
 	}
 }
