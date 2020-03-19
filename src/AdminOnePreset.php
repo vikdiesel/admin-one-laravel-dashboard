@@ -5,7 +5,6 @@ namespace AdminOneLaravelDashboard\Package;
 
 use Illuminate\Support\Arr;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Console\Presets\Preset;
 
 
 class AdminOnePreset extends Preset
