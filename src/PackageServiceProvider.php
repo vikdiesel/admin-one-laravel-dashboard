@@ -67,14 +67,38 @@ class PackageServiceProvider extends ServiceProvider{
 				$targetFilename = substr($targetFilename, 0, $stubExtPos) . '.php';
 			}
 
-			$targetFilename = $subDirectory . '/' . $targetFilename;
+			$targetFullPath = base_path($subDirectory . '/' . $targetFilename);
 
-			$filesystem->copy($res_file->getRealPath(), base_path($targetFilename));
+			if ($filesystem->exists($targetFullPath)) {
+				$command->info('File [' . $subDirectory . '/' . $targetFilename . '] already exists');
+				$command->info('Feel free to overwrite on new installs');
+
+				if ( $command->confirm( 'Overwrite?' ) ) {
+					$filesystem->copy($res_file->getRealPath(), $targetFullPath);
+				} else {
+					$command->line('Skipped');
+				}
+			} else {
+				$filesystem->copy($res_file->getRealPath(), $targetFullPath);
+			}
 		}
 	}
 
 	protected function copyFile($command, $file) {
 		$filesystem = new Filesystem;
-		$filesystem->copy(__DIR__ . '/stubs/' . $file, base_path($file));
+		$targetFullPath = base_path($file);
+
+		if ($filesystem->exists($targetFullPath)) {
+			$command->info('File [' . $file . '] already exists');
+			$command->info('Feel free to overwrite on new installs');
+
+			if ( $command->confirm( 'Overwrite?' ) ) {
+				$filesystem->copy(__DIR__ . '/stubs/' . $file, $targetFullPath);
+			} else {
+				$command->line('Skipped');
+			}
+		} else {
+			$filesystem->copy(__DIR__ . '/stubs/' . $file, $targetFullPath);
+		}
 	}
 }
