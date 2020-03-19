@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/version?v=1.3.7)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![Total Downloads](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/downloads)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![License](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/license)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard)
 
-![Free Laravel Admin Dashboard](https://justboil.me/images/one/preview-free.jpg?v=1.2.0)
+[![Vue.js Bulma free admin dashboard](https://justboil.me/images/one/repository-preview-free.png)](https://justboil.me/bulma-admin-template/one)
 
 **Admin One** is simple, beautiful and free Laravel admin dashboard (built with Vue.js, Bulma & Buefy).
 
@@ -61,7 +61,7 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 - `php artisan ui:controllers`
 - `php artisan jb:admin-one-preset`
 - `php artisan migrate`
-- `composer dump-autoload` (otherwise seed doesn't work)
+- `composer dump-autoload` (otherwise db:seed doesn't work)
 - `php artisan db:seed`
 - `npm install`
 - `npm run dev` or `npm run prod`
