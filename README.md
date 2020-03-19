@@ -1,8 +1,8 @@
 # [Admin One — Free Laravel Dashboard (SPA)](https://justboil.me/bulma-admin-template/one)
 
-[![Latest Stable Version](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/version?v=1.3.7)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![Total Downloads](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/downloads)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![License](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/license)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard)
+[![Latest Stable Version](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/version)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![Total Downloads](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/downloads)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![License](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/license)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard)
 
-[![Vue.js Bulma free admin dashboard](https://justboil.me/images/one/repository-preview-free.png)](https://justboil.me/bulma-admin-template/one)
+[![Laravel Vue.js Bulma free admin dashboard](https://justboil.me/images/one/repository-preview-laravel-free.png)](https://justboil.me/bulma-admin-template/one)
 
 **Admin One** is simple, beautiful and free Laravel admin dashboard (built with Vue.js, Bulma & Buefy).
 
