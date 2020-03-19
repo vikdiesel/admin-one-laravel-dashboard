@@ -6,7 +6,7 @@
 
 **Admin One** is simple, beautiful and free Laravel admin dashboard (built with Vue.js, Bulma & Buefy).
 
-* Built for Laravel 7.x (Laravel 5.8 and Laravel 6.x are also fine)
+* Built for Laravel 7.x
 * Fully-styled auth scaffolding
 * Profile & avatar management with back-end
 * Full Resource CRUD Sample (with front-end & back-end)
@@ -57,8 +57,9 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 
 - `cd` to project directory
 - `composer require vikdiesel/admin-one-laravel-dashboard --dev`
-- `php artisan make:auth` (skip on Laravel 6.x & Laravel 7.x)
-- `php artisan preset admin-one`
+- `composer require laravel/ui --dev`
+- `php artisan ui:controllers`
+- `php artisan jb:admin-one-preset`
 - `php artisan migrate`
 - `php artisan db:seed` (if you get an error, run `php artisan make:seed DummySeeder` &mdash; this does unknown magic, you may delete DummySeeder class after creation)
 - `npm install`
@@ -89,7 +90,7 @@ The issue list is reserved exclusively for bug reports and feature requests. Tha
 
 ## Package info
 
-Built for Laravel 7.x (Laravel 5.8 and Laravel 6.x are also fine).
+Built for Laravel 7.x (can be used with Laravel 6.x).
 
 In case of errors, just manually merge package's `src/stubs` directory into your app's base directory and install npm dependencies listed in `src/AdminOnePreset.php`
 
