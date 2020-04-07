@@ -25,7 +25,7 @@ class AdminOnePreset extends Preset
 	{
 		return [
 			'@mdi/font' => '^4.9.95',
-			'buefy' => '^0.8.13',
+			'buefy' => '^0.8.15',
 			'bulma' => '^0.7.5',
 			'chart.js' => '^2.9.3',
 			'laravel-mix-alias' => '^1.0.2',
