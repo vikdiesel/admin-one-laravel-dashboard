@@ -57,7 +57,7 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 
 - `cd` to project directory
 - `composer require vikdiesel/admin-one-laravel-dashboard --dev`
-- `composer require laravel/ui --dev`
+- `composer require laravel/ui`
 - `php artisan ui:controllers`
 - `php artisan jb:admin-one-preset`
 - `php artisan migrate`
@@ -82,7 +82,7 @@ The issue list is reserved exclusively for bug reports and feature requests. Tha
 2. Provide steps to reproduce
 3. Provide an expected behavior
 4. Describe what is actually happening 
-5. Platfrom, Browser & version as some issues may be browser specific
+5. Platform, Browser & version as some issues may be browser specific
 
 ## Licensing
 
