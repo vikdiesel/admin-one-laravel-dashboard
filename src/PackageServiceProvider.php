@@ -3,9 +3,7 @@
 
 namespace AdminOneLaravelDashboard\Package;
 
-use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Filesystem\Filesystem;
 
 class PackageServiceProvider extends ServiceProvider{
     /**
