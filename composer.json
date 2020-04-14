@@ -6,7 +6,10 @@
   "homepage": "https://github.com/vikdiesel/admin-one-laravel-dashboard",
   "authors": [
     {
-      "name": "Viktor Kuzhelnyi"
+      "name": "JustBoil.me",
+      "email": "viktor@justboil.me",
+      "homepage": "https://justboil.me",
+      "role": "Developer"
     }
   ],
   "require": {
