@@ -1,8 +1,8 @@
-# [Admin One — Free Laravel Dashboard (SPA)](https://justboil.me/bulma-admin-template/one)
+# [Admin One — Free Laravel Bulma Dashboard](https://justboil.me/bulma-admin-template/one)
 
 [![Latest Stable Version](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/version)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![Total Downloads](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/downloads)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![License](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/license)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard)
 
-[![Laravel Vue.js Bulma free admin dashboard](https://justboil.me/images/one/repository-preview-laravel-free.png)](https://justboil.me/bulma-admin-template/one)
+[![Laravel Vue.js Bulma free admin dashboard](https://justboil.me/images/one/repository-preview-laravel-free.png)](https://admin-one-laravel-free.justboil.me)
 
 **Admin One** is simple, beautiful and free Laravel admin dashboard (built with Vue.js, Bulma & Buefy).
 
@@ -10,14 +10,11 @@
 * Fully-styled auth scaffolding
 * Profile & avatar management with back-end
 * Full Resource CRUD Sample (with front-end & back-end)
-* Free under MIT License
+* Built with Vue.js, Bulma, Buefy & Laravel Mix
 * SPA — Single page app
-* Built with Vue.js, Bulma & Buefy
 * SCSS sources with variables
-* More than 17 custom components
+* Free under MIT License
 * [Premium version](https://justboil.me/bulma-admin-template/one) available
-
-[JustBoil.me](https://justboil.me) is excited to share this dashboard with community.
 
 ## Table of Contents
 
@@ -47,9 +44,17 @@ https://github.com/vikdiesel/admin-one-bulma-dashboard
 
 ## Description & Demo
 
-* Description: https://justboil.me/bulma-admin-template/one
-* **Free Laravel Dashboard** Demo: https://admin-one-laravel-free.justboil.me
-* **Premium Dashboard** Demo: https://admin-one-laravel.justboil.me
+#### Description
+
+https://justboil.me/bulma-admin-template/one
+
+#### Free Laravel Dashboard demo
+
+https://admin-one-laravel-free.justboil.me
+
+#### Premium Laravel Dashboard demo
+
+https://admin-one-laravel.justboil.me
 
 ## Quick Start
 
@@ -70,7 +75,7 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 
 We try to make sure Dashboard works well in latest versions of all major browsers
 
-![Chrome](https://justboil.me/images/browsers/chrome.png) ![Firefox](https://justboil.me/images/browsers/firefox.png) ![Microsoft Edge](https://justboil.me/images/browsers/edge.png) ![Opera](https://justboil.me/images/browsers/opera.png) ![Safari](https://justboil.me/images/browsers/safari.png)
+<img src="https://justboil.me/images/browsers-svg/chrome.svg" width="64" height="64" alt="Chrome"> <img src="https://justboil.me/images/browsers-svg/firefox.svg" width="64" height="64" alt="Firefox"> <img src="https://justboil.me/images/browsers-svg/edge.svg" width="64" height="64" alt="Edge"> <img src="https://justboil.me/images/browsers-svg/safari.svg" width="64" height="64" alt="Safari"> <img src="https://justboil.me/images/browsers-svg/opera.svg" width="64" height="64" alt="Opera">
 
 ## Reporting Issues
 
@@ -91,9 +96,9 @@ The issue list is reserved exclusively for bug reports and feature requests. Tha
 
 ## Package info
 
-Built for Laravel 7.x (can be used with Laravel 6.x).
+Built for Laravel 7.x.
 
-In case of errors, just manually merge package's `src/stubs` directory into your app's base directory and install npm dependencies listed in `src/AdminOnePreset.php`
+In case of errors (or if you'd like to use Admin One with older Laravel versions), just manually merge package's `src/stubs` directory into your app's base directory and install npm dependencies listed in `src/AdminOnePreset.php`
 
 ## Useful Links
 
