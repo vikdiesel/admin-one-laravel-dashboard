@@ -16,7 +16,13 @@
             <span v-show="!!checkedRows.length">({{ checkedRows.length }})</span>
           </button>
         </card-toolbar>
-        <modal-trash-box :is-active="isModalActive" :trash-subject="trashSubject" @confirm="trashConfirm" @cancel="trashCancel"/>
+
+        <modal-box
+          :is-active="isModalActive"
+          :trash-object-name="trashSubject"
+          @confirm="trashConfirm"
+          @cancel="trashCancel"
+        />
 
         <b-table
           :checked-rows.sync="checkedRows"
@@ -29,28 +35,27 @@
           default-sort="name"
           :data="clients">
 
-          <template slot-scope="props">
-            <b-table-column class="has-no-head-mobile is-image-cell">
+            <b-table-column class="has-no-head-mobile is-image-cell" v-slot="props">
               <div v-if="props.row.avatar" class="image">
                 <img :src="props.row.avatar" class="is-rounded">
               </div>
             </b-table-column>
-            <b-table-column label="Name" field="name" sortable>
+            <b-table-column label="Name" field="name" sortable v-slot="props">
               {{ props.row.name }}
             </b-table-column>
-            <b-table-column label="Company" field="company" sortable>
+            <b-table-column label="Company" field="company" sortable v-slot="props">
               {{ props.row.company }}
             </b-table-column>
-            <b-table-column label="City" field="city" sortable>
+            <b-table-column label="City" field="city" sortable v-slot="props">
               {{ props.row.city }}
             </b-table-column>
-            <b-table-column class="is-progress-col" label="Progress" field="progress" sortable>
+            <b-table-column class="is-progress-col" label="Progress" field="progress" sortable v-slot="props">
               <progress class="progress is-small is-primary" :value="props.row.progress" max="100">{{ props.row.progress }}</progress>
             </b-table-column>
-            <b-table-column label="Created">
+            <b-table-column label="Created" v-slot="props">
               <small class="has-text-grey is-abbr-like" :title="props.row.created">{{ props.row.created }}</small>
             </b-table-column>
-            <b-table-column custom-key="actions" class="is-actions-cell">
+            <b-table-column custom-key="actions" class="is-actions-cell" v-slot="props">
               <div class="buttons is-right">
                 <router-link :to="{name:'clients.edit', params: {id: props.row.id}}" class="button is-small is-primary">
                   <b-icon icon="account-edit" size="is-small"/>
@@ -60,7 +65,6 @@
                 </button>
               </div>
             </b-table-column>
-          </template>
 
           <section class="section" slot="empty">
             <div class="content has-text-grey has-text-centered">
@@ -92,10 +96,10 @@ import ModalBox from '@/components/ModalBox'
 import TitleBar from '@/components/TitleBar'
 import HeroBar from '@/components/HeroBar'
 import CardToolbar from '@/components/CardToolbar'
-import ModalTrashBox from '@/components/ModalTrashBox'
+
 export default {
   name: "ClientIndex",
-  components: {ModalTrashBox, CardToolbar, HeroBar, TitleBar, ModalBox, CardComponent},
+  components: {CardToolbar, HeroBar, TitleBar, ModalBox, CardComponent},
   data () {
     return {
       isModalActive: false,

@@ -10,7 +10,7 @@ $family-sans-serif: "Nunito", sans-serif;
 
 /* Base color */
 $base-color: #2e323a;
-$base-color-light: rgba(24,28,33,0.06);
+$base-color-light: rgba(24, 28, 33, .06);
 
 /* General overrides */
 $primary: $turquoise;
@@ -69,8 +69,6 @@ $table-cell-border: 1px solid $white-bis;
 /* Table: specifics */
 $table-avatar-size: $size-base * 1.5;
 $table-avatar-size-mobile: 25vw;
-$table-checkbox-border-width: 1px;
-$table-checkbox-border-color: $grey-lighter;
 
 /* Form */
 $checkbox-border: 1px solid $base-color;

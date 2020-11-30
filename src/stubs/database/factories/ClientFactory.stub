@@ -1,16 +1,32 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
-use App\Client;
-use Faker\Generator as Faker;
+use App\Models\Client;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Client::class, function (Faker $faker) {
-    return [
-        'name' => $faker->name,
-        'city' => $faker->city,
-        'company' => $faker->company,
-        'progress' => $faker->numberBetween(25, 95),
-        'created_at' => now()->subDays(rand(1, 180))
-    ];
-});
+class ClientFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Client::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->name,
+            'city' => $this->faker->city,
+            'company' => $this->faker->company,
+            'progress' => $this->faker->numberBetween(25, 95),
+            'created_at' => now()->subDays(rand(1, 180))
+        ];
+    }
+}

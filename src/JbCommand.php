@@ -19,7 +19,7 @@ class JbCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Install JustBoil Admin One dashboard preset';
+    protected $description = 'Install JustBoil Admin One dashboard preset!';
 
     /**
      * Create a new command instance.
@@ -41,12 +41,13 @@ class JbCommand extends Command
         AdminOnePreset::install();
 
         $this->copyFiles('app');
+        $this->copyFiles('app/Models');
         $this->copyFiles('app/Http/Controllers');
         $this->copyFiles('app/Http/Requests');
         $this->copyFiles('app/Processors');
         $this->copyFiles('database/factories');
         $this->copyFiles('database/migrations');
-        $this->copyFiles('database/seeds');
+        $this->copyFiles('database/seeders');
         $this->copyFiles('resources/images');
         $this->copyFiles('resources/js');
         $this->copyFiles('resources/js/components');

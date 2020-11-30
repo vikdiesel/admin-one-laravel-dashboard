@@ -5,8 +5,23 @@ table.table {
     }
   }
 
+  td, th {
+    &.checkbox-cell {
+      .b-checkbox.checkbox:not(.button) {
+        margin-right: 0;
+        width: 20px;
+
+        .control-label {
+          display: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+
   td {
     .image {
+      margin: 0 auto;
       width: $table-avatar-size;
       height: $table-avatar-size;
     }
@@ -16,28 +31,12 @@ table.table {
       vertical-align: middle;
     }
   }
-
-  tr {
-    td.is-image-cell:first-child {
-      .image {
-        margin: 0 auto;
-      }
-    }
-  }
 }
 
 .b-table {
   .table {
     border: 0;
     border-radius: 0;
-  }
-
-  .b-checkbox.checkbox input[type=checkbox] + .check {
-    border-width: $table-checkbox-border-width;
-  }
-
-  .b-checkbox.checkbox input[type=checkbox]:not(:checked):not(:indeterminate):not(:focus):not(:hover) + .check {
-    border-color: $table-checkbox-border-color;
   }
 
   /* This stylizes buefy's pagination */
@@ -71,6 +70,12 @@ table.table {
         background-color: transparent;
       }
     }
+  }
+}
+
+.has-thead-hidden {
+  thead {
+    display: none;
   }
 }
 

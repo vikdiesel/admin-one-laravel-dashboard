@@ -6,7 +6,7 @@
 
 **Admin One** is simple, beautiful and free Laravel admin dashboard (built with Vue.js, Bulma & Buefy).
 
-* Built for Laravel 7.x
+* Built for Laravel 8.x (for Laravel 7.x use 1.3 branch)
 * Fully-styled auth scaffolding
 * Profile & avatar management with back-end
 * Full Resource CRUD Sample (with front-end & back-end)
@@ -69,16 +69,18 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 - `composer require vikdiesel/admin-one-laravel-dashboard --dev`
 - `composer require laravel/ui`
 - `php artisan ui:controllers`
+- `php artisan ui:auth`
 - `php artisan jb:admin-one-preset`
-- `php artisan migrate`
-- `composer dump-autoload` (otherwise db:seed doesn't work)
-- `php artisan db:seed`
 - `npm install`
 - `npm run dev` or `npm run prod`
+- `php artisan migrate`
+- `php artisan db:seed`
+
+#### Sample data
 
 ## Browser Support
 
-We try to make sure Dashboard works well in latest versions of all major browsers
+We try to make sure Dashboard works well in the latest versions of all major browsers
 
 <img src="https://justboil.me/images/browsers-svg/chrome.svg" width="64" height="64" alt="Chrome"> <img src="https://justboil.me/images/browsers-svg/firefox.svg" width="64" height="64" alt="Firefox"> <img src="https://justboil.me/images/browsers-svg/edge.svg" width="64" height="64" alt="Edge"> <img src="https://justboil.me/images/browsers-svg/safari.svg" width="64" height="64" alt="Safari"> <img src="https://justboil.me/images/browsers-svg/opera.svg" width="64" height="64" alt="Opera">
 
@@ -101,7 +103,7 @@ The issue list is reserved exclusively for bug reports and feature requests. Tha
 
 ## Package info
 
-Built for Laravel 7.x.
+Built for Laravel 8.x. For Laravel 7.x use 1.3 branch
 
 In case of errors (or if you'd like to use Admin One with older Laravel versions), just manually merge package's `src/stubs` directory into your app's base directory and install npm dependencies listed in `src/AdminOnePreset.php`
 

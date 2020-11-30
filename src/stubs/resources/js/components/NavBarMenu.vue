@@ -1,5 +1,9 @@
 <template>
-  <div @click="toggle" class="navbar-item has-dropdown has-dropdown-with-icons" :class="{ 'is-hoverable':isHoverable, 'is-active':isDropdownActive }">
+  <div
+    class="navbar-item has-dropdown has-dropdown-with-icons"
+    :class="{ 'is-hoverable': isHoverable, 'is-active': isDropdownActive }"
+    @click="toggle"
+  >
     <a class="navbar-link is-arrowless">
       <slot/>
       <b-icon :icon="toggleDropdownIcon" custom-size="default"/>
@@ -27,7 +31,7 @@ export default {
       return this.isDropdownActive ? 'chevron-up' : 'chevron-down'
     }
   },
-  created () {
+  mounted () {
     window.addEventListener('click', this.forceClose)
   },
   beforeDestroy () {

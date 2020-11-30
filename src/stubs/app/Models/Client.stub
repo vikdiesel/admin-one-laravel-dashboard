@@ -1,13 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Processors\AvatarProcessor;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
+    use HasFactory;
+
     protected $appends = [
         'created'
     ];

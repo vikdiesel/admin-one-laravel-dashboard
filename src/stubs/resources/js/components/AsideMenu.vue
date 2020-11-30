@@ -9,12 +9,15 @@
     </aside-tools>
     <div class="menu is-menu-main">
       <template v-for="(menuGroup, index) in menu" >
-        <p class="menu-label" v-if="typeof menuGroup === 'string'" :key="index">{{ menuGroup }}</p>
+        <p v-if="typeof menuGroup === 'string'" :key="index" class="menu-label">
+          {{ menuGroup }}
+        </p>
         <aside-menu-list
             v-else
             :key="index"
+          :menu="menuGroup"
             @menu-click="menuClick"
-            :menu="menuGroup"/>
+        />
       </template>
     </div>
   </aside>
@@ -23,10 +26,11 @@
 <script>
 import { mapState } from 'vuex'
 import AsideTools from '@/components/AsideTools'
+import AsideMenuList from '@/components/AsideMenuList'
 
 export default {
   name: 'AsideMenu',
-  components: { AsideTools },
+  components: { AsideTools, AsideMenuList },
   props: {
     menu: {
       type: Array,

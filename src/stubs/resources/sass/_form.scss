@@ -4,15 +4,6 @@
       margin-top: $default-padding * .125;
     }
   }
-  .is-file-upload-label {
-    span:not(.delete) {
-      max-width: $default-padding * 5;
-      overflow-x: hidden;
-    }
-    .delete {
-      margin-left: $default-padding * .5;
-    }
-  }
   .control {
     .mdi-24px.mdi-set, .mdi-24px.mdi:before {
       font-size: inherit;

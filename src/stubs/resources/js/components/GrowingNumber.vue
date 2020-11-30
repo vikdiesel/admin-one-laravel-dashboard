@@ -35,7 +35,14 @@ export default {
   },
   computed: {
     newValueFormatted () {
-      return (this.newValue < 1000) ? this.newValue : numeral(this.newValue).format('0,0')
+      return this.newValue < 1000
+        ? this.newValue
+        : numeral(this.newValue).format('0,0')
+    }
+  },
+  watch: {
+    value () {
+      this.growInit()
     }
   },
   mounted () {
@@ -43,11 +50,11 @@ export default {
   },
   methods: {
     growInit () {
-      let m = this.value / (this.duration / 25)
+      const m = this.value / (this.duration / 25)
       this.grow(m)
     },
     grow (m) {
-      let v = Math.ceil(this.newValue + m)
+      const v = Math.ceil(this.newValue + m)
 
       if (v > this.value) {
         this.newValue = this.value
@@ -58,11 +65,6 @@ export default {
       setTimeout(() => {
         this.grow(m)
       }, 25)
-    }
-  },
-  watch: {
-    value () {
-      this.growInit()
     }
   }
 }

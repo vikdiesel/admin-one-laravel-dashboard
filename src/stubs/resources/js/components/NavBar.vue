@@ -4,9 +4,9 @@
       <a class="navbar-item is-hidden-desktop" @click.prevent="menuToggleMobile">
         <b-icon :icon="menuToggleMobileIcon"/>
       </a>
-      <div class="navbar-item">
+      <div class="navbar-item has-control no-left-space-touch">
         <div class="control">
-          <input class="input" placeholder="Search everywhere...">
+          <input class="input" placeholder="Search everywhere..." />
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
               <b-icon icon="email" custom-size="default"/>
               <span>Messages</span>
             </a>
-            <hr class="navbar-divider">
+            <hr class="navbar-divider" />
             <a class="navbar-item">
               <b-icon icon="logout" custom-size="default"/>
               <span>Log Out</span>
@@ -47,10 +47,14 @@
           </div>
 
           <div slot="dropdown" class="navbar-dropdown">
-            <a class="navbar-item">
-              <b-icon icon="account" custom-size="default"></b-icon>
+            <router-link
+              to="/profile"
+              class="navbar-item"
+              exact-active-class="is-active"
+            >
+              <b-icon icon="account" custom-size="default" />
               <span>My Profile</span>
-            </a>
+            </router-link>
             <a class="navbar-item">
               <b-icon icon="settings" custom-size="default"></b-icon>
               <span>Settings</span>
@@ -59,7 +63,7 @@
               <b-icon icon="email" custom-size="default"></b-icon>
               <span>Messages</span>
             </a>
-            <hr class="navbar-divider">
+            <hr class="navbar-divider" />
             <a class="navbar-item">
               <b-icon icon="logout" custom-size="default"></b-icon>
               <span>Log Out</span>
@@ -97,23 +101,24 @@ export default {
   },
   computed: {
     menuNavBarToggleIcon () {
-      return (this.isMenuNavBarActive) ? 'close' : 'dots-vertical'
+      return this.isMenuNavBarActive ? 'close' : 'dots-vertical'
     },
     menuToggleMobileIcon () {
       return this.isAsideMobileExpanded ? 'backburger' : 'forwardburger'
     },
-    ...mapState([
-      'isNavBarVisible',
-      'isAsideMobileExpanded',
-      'userName'
-    ])
+    ...mapState(['isNavBarVisible', 'isAsideMobileExpanded', 'userName'])
+  },
+  mounted () {
+    this.$router.afterEach(() => {
+      this.isMenuNavBarActive = false
+    })
   },
   methods: {
     menuToggleMobile () {
       this.$store.commit('asideMobileStateToggle')
     },
     menuNavBarToggle () {
-      this.isMenuNavBarActive = (!this.isMenuNavBarActive)
+      this.isMenuNavBarActive = !this.isMenuNavBarActive
     },
     logout () {
       document.getElementById('logout-form').submit()

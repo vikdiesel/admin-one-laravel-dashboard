@@ -23,15 +23,17 @@ class AdminOnePreset extends Preset
 	{
 		return [
 			'@mdi/font' => '^4.9.95',
-			'buefy' => '^0.8.15',
-			'bulma' => '^0.7.5',
+			'buefy' => '^0.9.3',
+			'bulma' => '^0.9.0',
 			'chart.js' => '^2.9.3',
 			'laravel-mix-alias' => '^1.0.2',
-			'moment' => '^2.24.0',
+			'dayjs' => '^1.8.35',
+			'sass-loader' => '^8.0.2',
+			'sass' => '^1.29.0',
 			'numeral' => '^2.0.6',
 			'vue-chartjs' => '^3.5.0',
-			'vue-router' => '^3.1.6',
-			'vuex' => '^3.1.3',
+			'vue-router' => '^3.4.3',
+			'vuex' => '^3.6.0',
 			'vue' => '^2.6.11'
        ] + Arr::except($packages, ['bootstrap','jquery','popper.js']);
 	}

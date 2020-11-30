@@ -5,11 +5,14 @@
         <p class="modal-card-title">Confirm action</p>
       </header>
       <section class="modal-card-body">
-        <slot/>
+        <p>
+          This will permanently delete <b>{{ trashObjectName }}</b>
+        </p>
+        <p>Action can not be undone.</p>
       </section>
       <footer class="modal-card-foot">
         <button class="button" type="button" @click="cancel">Cancel</button>
-        <button :class="confirmButtonClass" @click="confirm">{{ confirmLabel }}</button>
+        <button class="button is-danger" @click="confirm">Delete</button>
       </footer>
     </div>
   </b-modal>
@@ -23,31 +26,14 @@ export default {
       type: Boolean,
       default: false
     },
-    confirmLabel: {
+    trashObjectName: {
       type: String,
-      default: 'Confirm'
-    },
-    confirmType: {
-      type: String,
-      default: 'is-info'
+      default: null
     }
   },
   data () {
     return {
       isModalActive: false
-    }
-  },
-  computed: {
-    confirmButtonClass () {
-      return `button ${this.confirmType}`
-    }
-  },
-  methods: {
-    cancel () {
-      this.$emit('cancel')
-    },
-    confirm () {
-      this.$emit('confirm')
     }
   },
   watch: {
@@ -58,6 +44,14 @@ export default {
       if (!newValue) {
         this.cancel()
       }
+    }
+  },
+  methods: {
+    cancel () {
+      this.$emit('cancel')
+    },
+    confirm () {
+      this.$emit('confirm')
     }
   }
 }

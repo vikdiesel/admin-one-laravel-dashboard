@@ -1,5 +1,6 @@
 {
   "name": "vikdiesel/admin-one-laravel-dashboard",
+  "version": "1.4.0",
   "description": "Admin One - Laravel Dashboard Preset (SPA)",
   "keywords": ["laravel", "preset", "vue", "vue-js", "vuex", "dashboard", "template", "spa", "bulma"],
   "license": "MIT",
@@ -13,7 +14,7 @@
     }
   ],
   "require": {
-    "laravel/framework": "^7.0"
+    "laravel/framework": "^8.0"
   },
   "autoload": {
     "psr-4": {
