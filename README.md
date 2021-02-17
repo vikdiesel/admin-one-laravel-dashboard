@@ -76,8 +76,6 @@ To install, please follow these steps. **Note:** We assume you start with a fres
 - `php artisan migrate`
 - `php artisan db:seed`
 
-#### Sample data
-
 ## Browser Support
 
 We try to make sure Dashboard works well in the latest versions of all major browsers
