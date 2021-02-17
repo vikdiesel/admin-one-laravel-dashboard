@@ -33,6 +33,19 @@
     }
   }
 
+  .notification.is-card-toolbar {
+    border-radius: 0;
+    padding-left: $default-padding * .5;
+    padding-right: $default-padding * .5;
+    margin-bottom: 0;
+
+    .button.has-checked-rows-number {
+      span:last-child {
+        margin-left: $default-padding * .25;
+      }
+    }
+  }
+
   .is-widget-icon {
     .icon {
       width: 5rem;
