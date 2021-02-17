@@ -95,7 +95,7 @@ class JbCommand extends Command
                 $this->info('File [' . $subDirectory . '/' . $targetFilename . '] already exists');
                 $this->info('Feel free to overwrite on new installs');
 
-                if ( $this->confirm( 'Overwrite?' ) ) {
+                if ( $this->confirm( 'Overwrite?', true ) ) {
                     $filesystem->copy($res_file->getRealPath(), $targetFullPath);
                 } else {
                     $this->line('Skipped');
@@ -114,7 +114,7 @@ class JbCommand extends Command
             $this->info('File [' . $file . '] already exists');
             $this->info('Feel free to overwrite on new installs');
 
-            if ( $this->confirm( 'Overwrite?' ) ) {
+            if ( $this->confirm( 'Overwrite?', true ) ) {
                 $filesystem->copy(__DIR__ . '/stubs/' . $file, $targetFullPath);
             } else {
                 $this->line('Skipped');
