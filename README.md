@@ -14,7 +14,7 @@
 * SPA — Single page app
 * SCSS sources with variables
 * Free under MIT License
-* [Premium Vue.js version](https://justboil.me/bulma-admin-template/one) available
+* [Premium Vue.js version](https://justboil.me/bulma-admin-template/one) available. The free Laravel version can be extended with premium Vue.js & scss components (Vue CLI source files)
 
 ## Table of Contents
 
@@ -80,7 +80,7 @@ https://admin-one-laravel-free.justboil.me
 
 #### Premium Dashboard demo
 
-The free Laravel version can be extended with premium Vue.js & scss components
+The free Laravel version can be extended with premium Vue.js & scss components (Vue CLI source files)
 
 https://admin-one.justboil.me
 
