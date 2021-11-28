@@ -29,7 +29,7 @@
                 <div class="field">
                     <label class="label" for="password">{{ __('Password') }}</label>
                     <div class="control">
-                        <input id="password" type="password" class="input @error('password') is-danger @enderror" name="password" required autocomplete="current-password" autofocus>
+                        <input id="password" type="password" class="input @error('password') is-danger @enderror" name="password" required autocomplete="current-password">
                     </div>
                     @error('password')
                         <p class="help is-danger" role="alert">
@@ -38,12 +38,14 @@
                     @enderror
                 </div>
 
+                <div class="field">
                 <div class="control">
                     <label tabindex="0" class="b-checkbox checkbox is-thin">
                         <input type="checkbox" value="false" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                         <span class="check is-black"></span>
                         <span class="control-label">{{ __('Remember Me') }}</span>
                     </label>
+                </div>
                 </div>
 
                 <hr>
