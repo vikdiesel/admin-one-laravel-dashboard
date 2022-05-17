@@ -1,7 +1,5 @@
 # Free Laravel 9.x Vue.js 2.x Buefy Bulma Dashboard
 
-[![Laravel Vue.js Bulma free admin dashboard](https://justboil.me/images/one/repository-preview-laravel-hi-res.png)](https://admin-one-laravel-free.justboil.me)
-
 <table>
   <tr>
     <td align="center"><a href="https://vikdiesel.github.io/admin-one-vue-bulma-dashboard/" target="_blank" title="Bulma Vue.js 2.x Buefy free admin dashboard"><img src="https://static.justboil.me/templates/one/repo-bulma-vue.png" /></a></td>
