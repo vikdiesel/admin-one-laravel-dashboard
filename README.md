@@ -17,7 +17,7 @@ Simple, beautiful and free **Vue.js 2.x** **Bulma** **Buefy** admin dashboard fo
 * **Laravel 9.x Jetstream Inertia + Vue** stack
 * Laravel Mix
 * Classic **Options API** using `data`, `computed`, `methods`, etc.
-* SPA with **Vuex** & **Router**
+* SPA with **Vuex** & **Inertia Router**
 * **Styled** scrollbars
 * **SCSS sources** with variables
 * Reusable components
