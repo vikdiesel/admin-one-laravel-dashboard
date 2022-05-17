@@ -1,116 +1,368 @@
-# [Admin One — Free Laravel Vue Bulma Dashboard](https://justboil.me/bulma-admin-template/free-laravel-dashboard/)
-
-[![Latest Stable Version](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/version?151)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![Total Downloads](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/downloads)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard) [![License](https://poser.pugx.org/vikdiesel/admin-one-laravel-dashboard/license)](https://packagist.org/packages/vikdiesel/admin-one-laravel-dashboard)
+# Free Laravel 9.x Vue.js 2.x Buefy Bulma Dashboard
 
 [![Laravel Vue.js Bulma free admin dashboard](https://justboil.me/images/one/repository-preview-laravel-hi-res.png)](https://admin-one-laravel-free.justboil.me)
 
-**Admin One** is simple, beautiful and free Laravel admin dashboard (built with Vue.js, Bulma & Buefy).
+<table>
+  <tr>
+    <td align="center"><a href="https://vikdiesel.github.io/admin-one-vue-bulma-dashboard/" target="_blank" title="Bulma Vue.js 2.x Buefy free admin dashboard"><img src="https://static.justboil.me/templates/one/repo-bulma-vue.png" /></a></td>
+    <td align="center"><a href="https://vikdiesel.github.io/admin-two-vue-bulma-dashboard/" target="_blank" title="Free Bulma Vue 2.x Buefy admin template"><img src="https://static.justboil.me/templates/two/repo-bulma-vue.png" /></a></td>
+  </tr>
+</table>
 
-* Built for Laravel 8.x (for Laravel 7.x use 1.3 version)
-* Fully-styled auth scaffolding
-* Profile & avatar management with back-end
-* Full Resource CRUD Sample (with front-end & back-end)
-* Built with Vue.js, Bulma, Buefy & Laravel Mix
-* SPA — Single page app
-* SCSS sources with variables
-* Free under MIT License
-* [Premium Vue.js version](https://justboil.me/bulma-admin-template/one/) available. The free Laravel version can be extended with premium Vue.js & scss components (Vue CLI source files)
+This guide will help you integrate your Laravel Jetstream application with either [vikdiesel/admin-one-vue-bulma-dashboard](https://github.com/vikdiesel/admin-one-vue-bulma-dashboard) or [vikdiesel/admin-two-vue-bulma-dashboard](https://github.com/vikdiesel/admin-two-vue-bulma-dashboard) Vue Bulma Buefy dashboard.
 
-## Table of Contents
+**Please note:** this document is work in progress, so [some things are missing](#work-in-progress).
 
-* [Other versions](#other-versions)
-  * [Bulma versions](#bulma-versions)
-  * [Vue.js 3 TailwindCSS](#vuejs-3-tailwindcss-dashboard)
-* [Description & Demo](#description--demo)
-* [Quick Start](#quick-start)
-* [Browser Support](#browser-support)
-* [Reporting Issues](#reporting-issues)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
+Simple, beautiful and free **Vue.js 2.x** **Bulma** **Buefy** admin dashboard for **Laravel 9.x Jetstream Inertia + Vue** stack
 
-## Other versions
-
-### Bulma versions
-
-Other Bulma dashboard versions: https://justboil.me/bulma-admin-template/
-
-### Vue.js 3 TailwindCSS dashboard
-
-* Built with **Vue.js 3**, **TailwindCSS** framework & **Composition API**
-* **Vite** and **Vue CLI** build tools
-* **Dark mode**
-* **Styled** scrollbars
+* Built with **Vue.js 2.x** **Bulma** and **Buefy**
+* **Laravel 9.x Jetstream Inertia + Vue** stack
+* Laravel Mix
+* Classic **Options API** using `data`, `computed`, `methods`, etc.
 * SPA with **Vuex** & **Router**
-* **Production CSS** is only **33kb**
+* **Styled** scrollbars
+* **SCSS sources** with variables
+* Reusable components
+* Responsive
+* Free under MIT License
+* [Premium versions](https://justboil.me/bulma-admin-template/) available
 
-More info: https://github.com/justboil/admin-one-vue-tailwind
+## Table of contents
 
-[![Free Vue.js 3 Tailwind CSS admin dashboard](https://justboil.me/images/one-v3/repository-tailwind-vue3-vite.png)](https://github.com/justboil/admin-one-vue-tailwind)
+* [Install](#install)
+* [Copy styles, components and scripts](#copy-styles-components-and-scripts)
+* [Add pages](#add-pages)
+* [Fix router links](#fix-router-links)
+* [Add Inertia-related stuff](#add-inertia-related-stuff)
+* [Work in progress](#work-in-progress)
+* [Laravel 7.x & 8.x](#laravel-7x--8x)
 
-## Description & Demo
+## Install
 
-#### Description
+* [Install Laravel](https://laravel.com/docs/installation) application
+* [Install Jetstream](https://jetstream.laravel.com/2.x/installation.html) with Inertia + Vue stack
+* `cd` to project dir 
+* Move `resources/js` folder to `resources-temp/js`. These js files will serve as a reference during development process (just in case, you'll ever need to extract some logic, that is missing here)
+* run `npm remove @inertiajs/inertia-vue3 @vue/compiler-sfc @tailwindcss/forms @tailwindcss/typography postcss postcss-import tailwindcss`
+* run `npm i vuex@^3 vue@^2 vue-loader@^15 @vue/composition-api @inertiajs/inertia-vue bulma buefy chart.js vue-chartjs numeral sass sass-loader -D`
 
-https://justboil.me/bulma-admin-template/free-laravel-dashboard/
+Replace `postCss()` with `sass()` and `app.scss` with `main.scss` in `webpack.mix.js`:
 
-#### Free Laravel Dashboard demo
+```javascript
+mix.js('resources/js/app.js', 'public/js').vue()
+  .sass('resources/scss/main.scss', 'public/css')
+  .alias({
+    '@': 'resources/js',
+  })
+```
 
-https://admin-one-laravel-free.justboil.me
+## Copy styles, components and scripts
 
-#### Premium Dashboard demo
+Clone either [vikdiesel/admin-one-vue-bulma-dashboard](https://github.com/vikdiesel/admin-one-vue-bulma-dashboard) or [vikdiesel/admin-two-vue-bulma-dashboard](https://github.com/vikdiesel/admin-two-vue-bulma-dashboard) project locally into a separate folder
 
-The free Laravel version can be extended with premium Vue.js & scss components (Vue CLI source files)
+Next, copy these files **from cloned dashboard project** directory **to laravel project** directory:
 
-https://admin-one.justboil.me
+* Copy `src/components` `src/store` `src/menu.js` to `resources/js/`
+* Copy `src/App.vue` and `src/FullPage.vue` to `resources/Layouts/`
+* Copy `src/css` and `src/scss` to `resources/`
+* Copy `src/assets/justboil-logo.svg` to `resources/js/images/`
+* Delete `resources/css/app.css`
+* Copy `resources` directory **from this repository** to **to laravel project**
 
-## Quick Start
+##### In resources/views/app.blade.php
 
-To install, please follow these steps. **Note:** We assume you start with a fresh Laravel project.
+Replace `app.css` with `main.css`:
 
-- `cd` to project directory
-- `composer require vikdiesel/admin-one-laravel-dashboard --dev`
-- `composer require laravel/ui`
-- `php artisan ui:controllers`
-- `php artisan ui:auth`
-- `php artisan jb:admin-one-preset`
-- `npm install`
-- `npm run dev` or `npm run prod`
-- `php artisan migrate`
-- `php artisan db:seed`
+```php
+<!-- Styles -->
+<link rel="stylesheet" href="{{ mix('css/main.css') }}">
+```
 
-## Browser Support
+Add before `</body>`:
 
-We try to make sure Dashboard works well in the latest versions of all major browsers
+```html
+<link href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+```
 
-<img src="https://justboil.me/images/browsers-svg/chrome.svg" width="64" height="64" alt="Chrome"> <img src="https://justboil.me/images/browsers-svg/firefox.svg" width="64" height="64" alt="Firefox"> <img src="https://justboil.me/images/browsers-svg/edge.svg" width="64" height="64" alt="Edge"> <img src="https://justboil.me/images/browsers-svg/safari.svg" width="64" height="64" alt="Safari"> <img src="https://justboil.me/images/browsers-svg/opera.svg" width="64" height="64" alt="Opera">
+##### In resources/layouts/App.vue & FullPage.vue
 
-## Reporting Issues
+Replace `<router-view />` with `<slot />`
 
-JustBoil's free items are limited to community support on GitHub.
+##### In resources/layouts/App.vue
 
-The issue list is reserved exclusively for bug reports and feature requests. That means we do not accept usage questions. If you open an issue that does not conform to the requirements, it will be closed.
+Add `this.$store.dispatch('toggleFullPage', false)` to `created()` lifecycle hook
 
-1. Make sure that you are using the latest version of the Dashboard. Issues for outdated versions are irrelevant
-2. Provide steps to reproduce
-3. Provide an expected behavior
-4. Describe what is actually happening 
-5. Platform, Browser & version as some issues may be browser specific
+##### In resources/layouts/FullPage.vue
 
-## Licensing
+Add `this.$store.dispatch('toggleFullPage', true)` to `created()` lifecycle hook
 
-- Copyright &copy; 2019-2021 JustBoil.me (https://justboil.me)
-- Licensed under MIT
+Remove `beforeDestroy()` lifecycle hook
 
-## Package info
+##### In resources/layouts/Tiles.vue
 
-Built for Laravel 8.x. For Laravel 7.x use 1.3 branch
+Add `import filter from 'lodash/filter'`
 
-In case of errors (or if you'd like to use Admin One with older Laravel versions), just manually merge package's `src/stubs` directory into your app's base directory and install npm dependencies listed in `src/AdminOnePreset.php`
+Add `filter()` and replace `this.$slots.default` with `slots` in `render()` method, so you'll get:
 
-## Useful Links
+```javascript
+render (createElement) {
+    const renderAncestor = elements => createElement(
+      // ...
+    )
 
-- [JustBoil.me](https://justboil.me)
-- [Affiliate Program](https://justboil.me/info/affiliates)
-- [Bulma](https://bulma.io)
-- [Buefy](https://buefy.org)
-- [Laravel](https://laravel.com)
+    const slots = filter(this.$slots.default, slot => !!slot.tag)
+
+    if (slots.length <= this.maxPerRow) {
+      return renderAncestor(slots)
+    } else {
+      return createElement(
+        'div',
+        { attrs: { class: 'is-tiles-wrapper' } },
+        chunk(slots, this.maxPerRow).map(group => {
+          return renderAncestor(group)
+        })
+      )
+    }
+  }
+```
+
+## Add Pages
+
+Let's just add first page. You can repeat these steps for other pages, if you wish to. If you've followed previous steps, there's already `resources/js/Pages/HomeExample.vue` for your reference.
+
+First, copy `src/views/Home.vue` (original dashboard project) to `resources/js/Pages/` (your Laravel project).
+
+Add `Head`. Then, wrap page contents into `App` Layout component:
+
+```vue
+<template>
+<app>
+  <Head title="Dashboard" />
+  <title-bar :title-stack="titleStack" />
+  <!-- ... -->
+</app>
+</template>
+<script>
+import { Head } from '@inertiajs/inertia-vue'
+import App from '@/Layouts/App.vue'
+// ...
+
+export default defineComponent({
+  name: 'Home',
+  components: {
+    Head,
+    App,
+    // ...
+  }
+  // ...
+})
+</script>
+```
+
+Add route in `routes/web.php`. There's a `/dashboard` route already defined by default, so just replace `Inertia::render('Dashboard')` with `Inertia::render('Home')`:
+
+```php
+Route::get('/dashboard', function () {
+  return Inertia::render('Home');
+})->name('dashboard');
+```
+
+## Fix router links
+
+Here we replace router-link with Inertia Link.
+
+##### resources/js/menu.js
+
+Optionally, you can pass menu via Inertia shared props, so it's going to be controlled with PHP. Here we'd just use JS.
+
+`to` should be replaced with `route` which specifies route name defined in `routes/web.php`. For external links `href` should be used instead. Here's an example for `menu.js`:
+
+```javascript
+export default [
+  'General',
+  [
+    {
+      route: 'dashboard',
+      icon: mdiDesktopMac,
+      label: 'Dashboard'
+    },
+    {
+      href: 'https://example.com/',
+      icon: mdiDesktopMac,
+      label: 'Example.com'
+    }
+  ]
+]
+```
+
+Route names reflect ones defined in `routes/web.php`:
+
+```php
+Route::get('/dashboard', function () {
+  return Inertia::render('Home');
+})->name('dashboard');
+```
+
+Now, let's update vue files, to make them work with route names and Inertia links.
+
+##### resources/js/components/AsideMenuItem.vue
+
+Add `Link` import to `<script>`:
+
+```vue
+<script>
+import { Link } from '@inertiajs/inertia-vue'
+// ...
+</script>
+```
+
+##### resources/js/components/AsideMenuItem.vue
+
+Replace `componentIs` in `computed{}` with:
+
+```vue
+<script>
+export default defineComponent({
+  // ...
+  computed: {
+    componentIs () {
+      return this.item.route ? Link : 'a'
+    }
+    // ...
+  }
+  // ...
+})
+</script>
+```
+
+Replace `<component>` attrs with:
+
+```vue
+<template>
+<component
+  :is="componentIs"
+  :href="item.route ? $route(item.route) : item.href"
+  :target="item.target"
+  :class="{ 'has-icon': !!item.icon, 'has-dropdown-icon': hasDropdown, 'is-active': item.route && $route().current(item.route) }"
+  @click="menuClick"
+>
+  <!-- ... -->
+</component>
+</template>
+```
+
+##### .vue files in resources/js/ containing <router-link>
+
+Import and register `Link` component:
+
+```vue
+<script>
+import { Link } from '@inertiajs/inertia-vue'
+// ...
+
+export default defineComponent({
+  components: {
+    Link
+    // ...
+  }
+  // ...
+})
+</script>
+```
+
+Replace `<router-link>` with `<Link>`:
+
+```vue
+<template>
+<Link
+  :href="$route('dashboard')"
+  class="navbar-item"
+  :class="{ 'is-active': $route().current('dashboard') }"
+>
+  <!-- ... -->
+</Link>
+</template>
+```
+
+##### resources/js/components/NavBar.vue
+
+Replace `this.$router` with `Inertia`:
+
+```vue
+<script>
+import { Inertia } from '@inertiajs/inertia'
+// ...
+
+export default defineComponent({
+  // ...
+  mounted () {
+    Inertia.on('navigate', (event) => {
+      this.isMenuActive = false
+    })
+  }
+  // ...
+})
+</script>
+```
+
+## Add Inertia-related stuff
+
+##### resources/js/components/UserAvatar.vue
+
+Fix `newAvatar` computed property, so it fetches profile photo from backend:
+
+```vue
+<script>
+export default defineComponent({
+  // ...
+  computed: {
+    newAvatar () {
+      return this.avatar ? this.avatar : this.$page.props.user.profile_photo_url
+    }
+  }
+})
+</script>
+```
+
+##### resources/js/components/NavBar.vue
+
+Update `userName` and `logout`:
+
+```vue
+<script>
+export default defineComponent({
+  // ...
+  computed: {
+    // ...
+    userName () {
+      return this.$page.props.user.name
+    },
+    ...mapState([
+      'isAsideMobileExpanded',
+      'isNavBarVisible',
+      // remove 'userName'
+    ])
+  },
+  methods: {
+    // ...
+    logout () {
+      Inertia.post(route('logout'))
+    }
+  }
+  // ...
+})
+</script>
+```
+
+## Work in progress
+
+As mentioned, this guide is WIP - work in progress. Contributions open. Here's the list of what's missing right now:
+
+* Pages for resources/Pages/API
+* Pages for resources/Pages/Auth (except Login.vue and Register.vue)
+* Pages for resources/Pages/Profile
+* Unused default Jetstream files list
+
+## Laravel 7.x & 8.x
+
+If you're using an older version of Laravel, please follow [Laravel 7.x & 8.x guide](https://github.com/vikdiesel/admin-one-laravel-dashboard/.laravel-7x-8x).
