@@ -7,7 +7,7 @@
   </tr>
 </table>
 
-This guide will help you integrate your Laravel Jetstream application with either [vikdiesel/admin-one-vue-bulma-dashboard](https://github.com/vikdiesel/admin-one-vue-bulma-dashboard) or [vikdiesel/admin-two-vue-bulma-dashboard](https://github.com/vikdiesel/admin-two-vue-bulma-dashboard) Vue Bulma Buefy dashboard.
+This guide will help you integrate your **Laravel Jetstream** application with either [vikdiesel/admin-one-vue-bulma-dashboard](https://github.com/vikdiesel/admin-one-vue-bulma-dashboard) or [vikdiesel/admin-two-vue-bulma-dashboard](https://github.com/vikdiesel/admin-two-vue-bulma-dashboard) Vue Bulma Buefy dashboard.
 
 **Please note:** this document is work in progress, so [some things are missing](#work-in-progress).
 
