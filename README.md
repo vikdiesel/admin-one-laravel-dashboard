@@ -363,4 +363,4 @@ As mentioned, this guide is WIP - work in progress. Contributions open. Here's t
 
 ## Laravel 7.x & 8.x
 
-If you're using an older version of Laravel, please follow [Laravel 7.x & 8.x guide](https://github.com/vikdiesel/admin-one-laravel-dashboard/.laravel-7x-8x).
+If you're using an older version of Laravel, please follow [Laravel 7.x & 8.x guide](https://github.com/vikdiesel/admin-one-laravel-dashboard/tree/master/.laravel-7x-8x).
