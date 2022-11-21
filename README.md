@@ -1,13 +1,8 @@
 # Free Laravel 9.x Vue.js 2.x Buefy Bulma Dashboard
 
-<table>
-  <tr>
-    <td align="center"><a href="https://vikdiesel.github.io/admin-one-vue-bulma-dashboard/" target="_blank" title="Bulma Vue.js 2.x Buefy free admin dashboard"><img src="https://static.justboil.me/templates/one/repo-bulma-vue.png" /></a></td>
-    <td align="center"><a href="https://vikdiesel.github.io/admin-two-vue-bulma-dashboard/" target="_blank" title="Free Bulma Vue 2.x Buefy admin template"><img src="https://static.justboil.me/templates/two/repo-bulma-vue.png" /></a></td>
-  </tr>
-</table>
+<a href="https://vikdiesel.github.io/admin-one-vue-bulma-dashboard/" target="_blank" title="Bulma Vue.js 2.x Buefy free admin dashboard"><img src="https://static.justboil.me/templates/one/repo-bulma-vue.png" /></a>
 
-This guide will help you integrate your **Laravel Jetstream** application with either [vikdiesel/admin-one-vue-bulma-dashboard](https://github.com/vikdiesel/admin-one-vue-bulma-dashboard) or [vikdiesel/admin-two-vue-bulma-dashboard](https://github.com/vikdiesel/admin-two-vue-bulma-dashboard) Vue Bulma Buefy dashboard.
+This guide will help you integrate your **Laravel Jetstream** application with [vikdiesel/admin-one-vue-bulma-dashboard](https://github.com/vikdiesel/admin-one-vue-bulma-dashboard) Vue Bulma Buefy dashboard.
 
 **Please note:** this document is work in progress, so [some things are missing](#work-in-progress).
 
